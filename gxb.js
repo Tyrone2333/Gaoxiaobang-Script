@@ -6,7 +6,7 @@
 // ==UserScript==
 // @name         高校邦脚本
 // @namespace    http://tampermonkey.net/
-// @version      0.0.4
+// @version      1.3
 // @description  高校邦脚本
 // @author       杨志清
 // @require      http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js
@@ -72,6 +72,7 @@ function skipExam() {
     }
 
 }
+
 function autoPlay() {
     //加速倍率推荐2.5，太高会导致播放不记录分数
     var vid = document.getElementById("vjs_video_3_html5_api")
@@ -89,6 +90,9 @@ function autoPlay() {
 }
 
 
-window.setInterval(autoPlay, 3000)
+window.setInterval(function () {
+    autoPlay()
+    skipExam()
+}, 3000)
 
 
