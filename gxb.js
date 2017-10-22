@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by enzo on 2017/10/21.
  */
 
@@ -28,7 +28,12 @@ function questionAuto() {
             }
         })
     })
+
+
     //提交
+
+    var quizSubmit = document.getElementById("quizSubmit")
+    quizSubmit.click()
     var oBtn = document.getElementsByClassName('btn btn-default gxb-sure')[0]
     oBtn.click()
 }
